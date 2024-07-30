@@ -1,0 +1,39 @@
+Normal way of checking date 
+
+$ date
+
+Now display date with pausing of 10 seconds 
+
+$ date +%T; sleep 10s; date +%T; 
+
+Displaying date with clear entering , so that it shows only date and time
+
+$ clear; date +%T; sleep 1s; clear;  date +%T; sleep 1s; 
+
+Open editor as 
+
+$ vi digi_watch.sh 
+
+#!/bin/bash
+
+Red=$'\e[1;31m'
+Green=$'\e[1;32m' 
+Blue=$'\e[1;34m' 
+while true 
+do 
+        clear 
+        echo $Red $(date +%T) 
+        sleep 1s 
+done 
+
+Give persmissions 
+
+$ chmod 777 digi_watch.sh 
+
+
+
+
+
+
+
+
